@@ -16,8 +16,6 @@ const reducer = (state, action) => {
             };
 
         case 'REMOVE_FROM_BASKET':
-            console.log('here calls remove ',{...state.basket});
-            console.log('action ', action.id)
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
             );
@@ -40,6 +38,13 @@ const reducer = (state, action) => {
                     ...state,
                     user: action.user
                 }
+
+            case 'EMPTY_BASKET':
+                return {
+                    ...state,
+                    basket: []
+                }
+
     
         default:
             return state;
