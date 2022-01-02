@@ -57,8 +57,8 @@ function Payment() {
             const users = collection(db, 'users');
             const allUsers =  getDocs(users);
             console.log('allUsers is :: ',  allUsers);
-            const myUser = query(allUsers, where("uid", "==", user?.uid)).get();
-            console.log('allUsers is :: ',  myUser);
+            //const myUser = query(allUsers, where("uid", "==", user?.uid)).get();
+            //console.log('allUsers is :: ',  myUser);
             // const cityList = citySnapshot.docs(user?.uid).collection('orders').doc(paymentIntent.id).set({
             //     basket: basket,
             //     amount: paymentIntent.amount,
